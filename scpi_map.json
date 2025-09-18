@@ -1,0 +1,90 @@
+{
+  "general_commands": [
+    {
+      "command": "*RST",
+      "description": "Скидання налаштувань приладу до заводських."
+    },
+    {
+      "command": "*IDN?",
+      "description": "Запит ідентифікаційної інформації приладу (виробник, модель, серійний номер)."
+    },
+    {
+      "command": ":SYST:ERR?",
+      "description": "Запит останньої помилки."
+    },
+    {
+      "command": ":SYST:LOC",
+      "description": "Переводить прилад в локальне керування (блокування віддаленого)."
+    },
+    {
+      "command": ":SYST:REM",
+      "description": "Переводить прилад у віддалене керування."
+    }
+  ],
+  "measurement_setup": [
+    {
+      "command": ":SENS:FUNC 'VOLT:DC'",
+      "description": "Встановлення режиму вимірювання постійної напруги."
+    },
+    {
+      "command": ":SENS:FUNC 'CURR:DC'",
+      "description": "Встановлення режиму вимірювання постійного струму."
+    },
+    {
+      "command": ":SENS:FUNC 'RES'",
+      "description": "Встановлення режиму вимірювання опору."
+    },
+    {
+      "command": ":SENS:VOLT:RANG 10",
+      "description": "Встановлення діапазону вимірювання напруги на 10 В."
+    },
+    {
+      "command": ":SENS:CURR:RANG 1",
+      "description": "Встановлення діапазону вимірювання струму на 1 А."
+    },
+    {
+      "command": ":SENS:VOLT:NPLC 1",
+      "description": "Встановлення NPLC (кількість циклів мережі) для швидкості вимірювання."
+    },
+    {
+      "command": ":SENS:VOLT:AVER:STAT ON",
+      "description": "Включення усереднення для вимірювання напруги."
+    },
+    {
+      "command": ":SENS:VOLT:AVER:COUN 10",
+      "description": "Встановлення кількості точок для усереднення."
+    }
+  ],
+  "measurement_commands": [
+    {
+      "command": ":READ?",
+      "description": "Запуск вимірювання та зчитування результату. Блокує роботу, доки не отримає дані."
+    },
+    {
+      "command": ":FETC?",
+      "description": "Зчитування результату вимірювання з внутрішнього буфера після команди :INIT."
+    },
+    {
+      "command": ":DATA:TSTAMP:FORM HMM",
+      "description": "Встановлення формату мітки часу як 'година, хвилина, мілісекунда'."
+    },
+    {
+      "command": ":DATA:REM?",
+      "description": "Зчитування з буфера всієї інформації, що залишилася."
+    }
+  ],
+  "trigger_system": [
+    {
+      "command": ":TRIG:COUN 1",
+      "description": "Встановлення лічильника тригерів на 1 вимірювання."
+    },
+    {
+      "command": ":TRIG:SOUR IMM",
+      "description": "Встановлення джерела тригера на негайне (immediate)."
+    },
+    {
+      "command": ":INIT",
+      "description": "Переведення приладу в стан очікування тригера."
+    }
+  ]
+}
